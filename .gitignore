@@ -1,0 +1,10 @@
+iteminfo_new.lub
+iteminfo_new.lua
+CompareResult.txt
+NewItemInfo.lua
+NewItemInfo.txt
+OldItemInfo.lua
+__pycache__/diffrent_check.cpython-37.pyc
+__pycache__/item_writer.cpython-37.pyc
+__pycache__/lua_readable_transfer.cpython-37.pyc
+lub2lua.bat
