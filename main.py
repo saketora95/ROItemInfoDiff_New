@@ -9,7 +9,8 @@ EXECUTE_PATH = os.path.abspath(os.path.dirname(__file__)) + '/'
 
 print('# 測試模式 -----')
 print('# - 測試模式會略過對 [ OldItemInfo.lua ], [ NewItemInfo.lua ] 以及 [ iteminfo_new.lub ] 的處理.')
-print('# - 用來直接確認 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 之間的比對\n')
+print('# - 用來直接確認 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 之間的比對')
+print('# -  - 注意: 缺少 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 檔案會造成程式錯誤\n')
 print('# - 如果 [ 要 ] 進入測試模式, 請輸入任意的文字後再按下 Enter,\n    如果 [ 不 ] 進入測試模式, 請直接按下 Enter.\n')
 
 if input('要進入測試模式嗎? '):
@@ -18,6 +19,7 @@ if input('要進入測試模式嗎? '):
 
 else:
     print('# 沒有進入測試模式, 照常執行.\n')
+
     # If exist old file but name is 'New', rename it
     print('# 舊版本確認 - 開始')
     diff_check = os.path.exists(EXECUTE_PATH + 'NewItemInfo.lua')
