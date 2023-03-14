@@ -10,7 +10,7 @@ EXECUTE_PATH = os.path.abspath(os.path.dirname(__file__)) + '/'
 print('# 測試模式 -----')
 print('# - 測試模式會略過對 [ OldItemInfo.lua ], [ NewItemInfo.lua ] 以及 [ iteminfo_new.lub ] 的處理.')
 print('# - 用來直接確認 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 之間的比對')
-print('# -  - 注意: 缺少 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 檔案會造成程式錯誤\n')
+print('# - - 注意: 缺少 [ OldItemInfo.lua ] 與 [ NewItemInfo.lua ] 檔案會造成程式錯誤\n')
 print('# - 如果 [ 要 ] 進入測試模式, 請輸入任意的文字後再按下 Enter,\n    如果 [ 不 ] 進入測試模式, 請直接按下 Enter.\n')
 
 if input('要進入測試模式嗎? '):
