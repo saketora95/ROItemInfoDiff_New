@@ -1,11 +1,12 @@
 print('# 程式開始執行\n')
 
 import os
+import sys
 from lua_readable_transfer import lua_transfer
 from item_writer import save_file
 from diffrent_check import compare_dict
 
-EXECUTE_PATH = os.path.abspath(os.path.dirname(__file__)) + '/'
+EXECUTE_PATH = os.path.abspath(os.path.dirname(sys.executable)) + '/'
 
 print('# 測試模式 -----')
 print('# - 測試模式會略過對 [ OldItemInfo.lua ], [ NewItemInfo.lua ] 以及 [ iteminfo_new.lub ] 的處理.')
