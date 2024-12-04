@@ -1,6 +1,6 @@
-def lua_transfer(input_file_path):
+def lua_transfer(input_file_path, encoding):
     raw_data = []
-    for line in open(input_file_path, 'r', encoding='utf-8'):
+    for line in open(input_file_path, 'r', encoding=encoding):
         if line[0] in ['[', 'u', 'i']:
             raw_data.append(line.strip('\n'))
 
