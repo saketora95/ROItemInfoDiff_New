@@ -33,5 +33,9 @@ def lua_transfer(input_file_path, encoding):
                     break
                 else:
                     item_dict[id]['Descript'] = item_dict[id]['Descript'][:code_index] + item_dict[id]['Descript'][code_index + 7:]
+            
+            # Slot number
+            slot_index = line.find('slotCount')
+            item_dict[id]['Slot'] = line[slot_index + 12:slot_index + 13]
 
     return item_dict
