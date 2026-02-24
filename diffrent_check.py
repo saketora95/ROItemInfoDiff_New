@@ -20,13 +20,13 @@ def compare_dict(old_dict, new_dict, result_path, encoding):
                     temp_text += '- [ID: {0}] {1}{2}\n+ '.format(
                         item_id,
                         old_dict[item_id]['Name_TC'],
-                        ' [{0}]'.format(old_dict[item_id]['Slot']) if old_dict[item_id]['Slot'] != 0 else ''
+                        ' [{0}]'.format(old_dict[item_id]['Slot']) if old_dict[item_id]['Slot'] != '0' else ''
                     )
 
                 temp_text += '[ID: {0}] {1}{2} (內容變更)\n{3}\n\n----- ----- -----\n\n'.format(
                     item_id,
                     new_dict[item_id]['Name_TC'],
-                    ' [{0}]'.format(new_dict[item_id]['Slot']) if new_dict[item_id]['Slot'] != 0 else '',
+                    ' [{0}]'.format(new_dict[item_id]['Slot']) if new_dict[item_id]['Slot'] != '0' else '',
                     '\n'.join([line for line in diff if not line.startswith('? ')]),
                 )
 
@@ -35,7 +35,7 @@ def compare_dict(old_dict, new_dict, result_path, encoding):
         # New item
         else:
             print('        - 發現 [ 新增道具 ]: {0} - {1}'.format(item_id, new_dict[item_id]['Name_TC']))
-            if new_dict[item_id]['Slot'] == 0:
+            if new_dict[item_id]['Slot'] == '0':
                 write_file.write(
                     '[ID: {0}] {1} (新增道具)\n{2}\n\n----- ----- -----\n\n'.format(
                         item_id,
